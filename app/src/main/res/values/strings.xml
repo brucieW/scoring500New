@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Scoring 500</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="match_items">Match Items</string>
+    <string name="restart_game">Restart Game</string>
+    <string name="new_game">New Game</string>
+    <string name="edit_games">Edit Games</string>
+    <string name="start_match">Start Match</string>
+    <string name="statistics">Statistics</string>
+    <string name="select_game_for_restart">Select Game for Restart</string>
+
+    <string name="no_match_records">There are no Match records. Click the button below to create a new match.</string>
+    <string name="no_active_games">There are no active games</string>
+    <string name="active_games">Active Games</string>
+    <string name="completed_games">Completed Games</string>
+    <string name="no_finished_games">No finished games have been recorded</string>
+    <string name="unique_names">Player names must be unique</string>
+    <string name="aces">Aces</string>
+    <string name="title_activity_new_game">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="warning">WARNING!</string>
+    <string name="select_backup">Select Backup</string>
+    <string name="backup_tag">Backing up data using the following tag</string>
+    <string name="clear_backups">Clear Backups</string>
+
+    <string name="shadow_text">Shadow Text</string>
+
+    <string name="teams">Teams</string>
+    <string name="three_players">Three Players</string>
+    <string name="home">Home</string>
+    <string name="players">Players</string>
+    <string name="create_team">New Team</string>
+    <string name="create_player">New Player</string>
+    <string name="team_name">Team Name</string>
+    <string name="player_name">Player Name</string>
+    <string name="team1_name">Team 1 Name</string>
+    <string name="team2_name">Team 2 Name</string>
+    <string name="east_west_name">East/West Name</string>
+    <string name="player1_name">Player 1 Name</string>
+    <string name="player2_name">Player 2 Name</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+
+    <string name="start_game">Start Game</string>
+    <string name="clear_data">Clear Data</string>
+    <string name="delete_match">Delete Match</string>
+    <string name="cancel">Cancel</string>
+    <string name="team1_title">Team 1</string>
+    <string name="team2_title">Team 2</string>
+    <string name="content_description">Content Description</string>
+
+    <string name="winning_bid_team_title">Winning Bid Team</string>
+    <string name="manage_teams">Manage Teams</string>
+    <string name="preferences">Preferences</string>
+    <string name="non_bidding_points">Non Bidding Points</string>
+    <string name="ten_trick_bonus">Ten Trick Bonus</string>
+    <string name="show_delete_match_dialog">Show Delete Match Dialog</string>
+    <string name="show_delete_game_dialog">Show Delete Game Dialog</string>
+    <string name="backup_database">Backup Database</string>
+    <string name="restore_database">Restore Database</string>
+    <string name="clear_database">Clear Database</string>
+    <string name="about">About</string>
+    <string name="close_app">Close Application</string>
+    <string name="new_match">New Match</string>
+    <string name="new_hand">New Hand</string>
+    <string name="game">Game</string>
+    <string name="select_teams_title">Select Teams or Players for New Match</string>
+    <string name="misere">Misère</string>
+    <string name="open_misere">Open Misère</string>
+    <string name="always_show">Always Show</string>
+
+    <string name="team_rankings">Team Rankings</string>
+    <string name="player_rankings">Player Rankings</string>
+    <string name="wins_losses">Wins/Losses</string>
+
+    <string name="about_text">Application for keeping track of all of your 500 card game scores.</string>
+    <string name="warning_removal_text">This will remove ALL data and the program will be restarted. Are you sure you want to continue?"</string>
+    <string name="warning_deleting_match">"This will permanently delete the selected match and all of its associated games."</string>
+    <string name="warning_deleting_game">"This will permanently delete this game and all of the associated hands."</string>
+    <string name="are_you_sure">Do you want to continue?</string>
+    <string name="version">Version 1.0</string>
+    <string name="programmed_by">Programmed by Bruce Edgerton</string>
+    <string name="copyright">Copyright &#169; 2022, All Rights Reserved</string>
+
+    <string name="NT">NT</string>
+    <string name="final_bid">Final Bid</string>
+    <string name="save_game">Save Game</string>
+    <string name="cancel_game">Cancel Game</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close">Close</string>
+
+    <string-array name="tokens">
+        <item>Barrow</item>
+        <item>Car</item>
+        <item>Dog</item>
+        <item>Hat</item>
+        <item>Iron</item>
+        <item>Ship</item>
+        <item>Shoe</item>
+        <item>Thimble</item>
+    </string-array>
+
+    <string-array name="suits">
+        <item>spades</item>
+        <item>clubs</item>
+        <item>diamonds</item>
+        <item>hearts</item>
+    </string-array>
+</resources>

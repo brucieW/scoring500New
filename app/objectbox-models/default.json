@@ -1,0 +1,186 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4749082001876860293",
+      "lastPropertyId": "4:1040619276319885401",
+      "name": "Game",
+      "properties": [
+        {
+          "id": "1:1590297598007940650",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9124509119646170897",
+          "name": "started",
+          "type": 6
+        },
+        {
+          "id": "3:2878066018632867859",
+          "name": "finished",
+          "type": 6
+        },
+        {
+          "id": "4:1040619276319885401",
+          "name": "matchId",
+          "indexId": "1:3937496225032974523",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Match"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:5550173265937400351",
+      "lastPropertyId": "3:4004768027355569235",
+      "name": "Hand",
+      "properties": [
+        {
+          "id": "1:1466935802241899277",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1255604716268855864",
+          "name": "bid",
+          "type": 9
+        },
+        {
+          "id": "3:4004768027355569235",
+          "name": "gameId",
+          "indexId": "2:6442819529946790180",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Game"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7893995694678697739",
+      "lastPropertyId": "2:1050404054778379179",
+      "name": "Match",
+      "properties": [
+        {
+          "id": "1:1753639889417769998",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1050404054778379179",
+          "name": "lastPlayed",
+          "type": 6
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:4127150298657220187",
+          "name": "teams",
+          "targetId": "6:4608367932619457590"
+        },
+        {
+          "id": "2:5349246814149018244",
+          "name": "players",
+          "targetId": "4:2159931651286692867"
+        }
+      ]
+    },
+    {
+      "id": "4:2159931651286692867",
+      "lastPropertyId": "2:2483919447779163447",
+      "name": "Player",
+      "properties": [
+        {
+          "id": "1:3889900314421925552",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2483919447779163447",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:3620780666172326956",
+          "name": "teams",
+          "targetId": "6:4608367932619457590"
+        }
+      ]
+    },
+    {
+      "id": "5:2275686415804842469",
+      "lastPropertyId": "3:6607373120971173652",
+      "name": "ScoringRules",
+      "properties": [
+        {
+          "id": "1:3135505176385774977",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9152912299569751759",
+          "name": "nonBiddingPointsType",
+          "type": 5
+        },
+        {
+          "id": "3:6607373120971173652",
+          "name": "isTenTricksBonus",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:4608367932619457590",
+      "lastPropertyId": "2:4725935024616823792",
+      "name": "Team",
+      "properties": [
+        {
+          "id": "1:6221212976337930362",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4725935024616823792",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "4:6740185547082630518",
+          "name": "players",
+          "targetId": "4:2159931651286692867"
+        },
+        {
+          "id": "5:83363559114446269",
+          "name": "matches",
+          "targetId": "3:7893995694678697739"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "6:4608367932619457590",
+  "lastIndexId": "2:6442819529946790180",
+  "lastRelationId": "5:83363559114446269",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
