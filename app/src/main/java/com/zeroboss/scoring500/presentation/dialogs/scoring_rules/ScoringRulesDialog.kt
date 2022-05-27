@@ -48,21 +48,8 @@ fun ScoringRulesDialog(
         Dialog(
             onDismissRequest = { closeDialog(homeViewModel) }
         ) {
-            val screenWidth = LocalConfiguration.current.screenWidthDp
-
-            val width: Dp
-            val height: Dp
-
-            if (screenWidth < 600) {
-                width = 300.dp
-                height = 280.dp
-            } else {
-                width = 300.dp
-                height = 320.dp
-            }
-
             Card(
-                modifier = Modifier.size(width, height),
+                modifier = Modifier.size(300.dp, 320.dp),
                 shape = RoundedCornerShape(20.dp)
             ) {
                 Column(

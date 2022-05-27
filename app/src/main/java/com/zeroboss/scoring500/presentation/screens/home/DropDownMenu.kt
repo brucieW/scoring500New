@@ -21,6 +21,7 @@ import com.zeroboss.scoring500.presentation.dialogs.*
 import com.zeroboss.scoring500.presentation.dialogs.scoring_rules.ScoringRulesDialog
 import com.zeroboss.scoring500.presentation.screens.destinations.ManageTeamsScreenDestination
 import com.zeroboss.scoring500.presentation.screens.destinations.StatisticsScreenDestination
+import com.zeroboss.scoring500.presentation.screens.destinations.TutorialScreenDestination
 import com.zeroboss.scoring500.ui.theme.menuColors
 import org.koin.androidx.compose.get
 import org.koin.androidx.compose.viewModel
@@ -47,6 +48,16 @@ fun DropDownMenu(
                 onDismissRequest = { expanded = false },
                 modifier = Modifier.padding(end = 10.dp)
             ) {
+                DropdownMenuItemExt(
+                    onClick = {
+                        navigator.navigate(TutorialScreenDestination)
+                    }
+                ) {
+                    Text(stringResource(R.string.tutorial))
+                }
+
+                Divider()
+
                 DropdownMenuItemExt(
                     onClick = {
                         navigator.navigate(ManageTeamsScreenDestination)

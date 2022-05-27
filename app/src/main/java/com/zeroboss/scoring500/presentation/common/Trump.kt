@@ -73,18 +73,33 @@ data class Trump(
     }
 
     override fun toString() : String {
-        return playerOrTeamId.toString() + "," + suit.suitTag + "," + bidCount + "," + tricksWon
+        val sb = StringBuilder()
+        sb.append(playerOrTeamId)
+        addValue(sb, suit.suitTag)
+        addValue(sb, bidCount)
+        tricksWon.forEach { addValue(sb, it) }
+
+        return sb.toString()
+    }
+
+    private fun addValue(sb: StringBuilder, value: Any) {
+        sb.append(",").append(value)
     }
 }
 
 fun trumpFromString(text: String) : Trump {
     val tokens = text.split(",")
+    val tricksWon = mutableListOf(tokens[3].toInt(), tokens[4].toInt())
+
+    if (tokens.size == 6) {
+        tricksWon.add(tokens[5].toInt())
+    }
 
     return Trump(
         playerOrTeamId = tokens[0].toInt(),
         suit = getSuitFromTag(tokens[1]),
         bidCount = tokens[2].toInt(),
-        tricksWon = mutableListOf(tokens[3].toInt(), tokens[4].toInt(), tokens[5].toInt())
+        tricksWon = tricksWon
     )
 }
 

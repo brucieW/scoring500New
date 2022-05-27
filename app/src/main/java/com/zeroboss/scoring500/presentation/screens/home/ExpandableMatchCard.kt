@@ -1,17 +1,20 @@
 package com.zeroboss.scoring500.presentation.screens.home
 
 import android.annotation.SuppressLint
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.updateTransition
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -35,8 +38,9 @@ import com.zeroboss.scoring500.ui.theme.smallerText
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 import com.zeroboss.scoring500.domain.model.Match
+import com.zeroboss.scoring500.ui.theme.Blue300
 
-@OptIn(ExperimentalMaterialApi::class)
+@OptIn(ExperimentalMaterialApi::class, ExperimentalAnimationApi::class)
 @SuppressLint("UnusedTransitionTargetStateParameter")
 @Composable
 fun ExpandableMatchCard(
@@ -64,8 +68,12 @@ fun ExpandableMatchCard(
     }
 
     Card(
-        onClick = { onCardArrowClicked() },
         elevation = 10.dp,
+        modifier = Modifier
+            .animateContentSize()
+            .fillMaxWidth()
+            .clickable { onCardArrowClicked() }
+            .padding(start = 1.dp, top = 1.dp, end = 10.dp, bottom = 5.dp)
     ) {
         Column(
             modifier = Modifier.padding(top = 10.dp, bottom = 10.dp),
@@ -132,6 +140,7 @@ fun ExpandableMatchCard(
             }
 
             if (expanded) {
+
                 Row(
                     modifier = Modifier.padding(top = 5.dp),
                     horizontalArrangement = Arrangement.Center
@@ -264,6 +273,7 @@ fun ExpandableMatchCard(
         }
     }
 }
+
 
 @Composable
 fun CardArrow(

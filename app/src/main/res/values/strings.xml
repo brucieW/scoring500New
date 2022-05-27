@@ -3,7 +3,7 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="match_items">Match Items</string>
+    <string name="match_history">Match History</string>
     <string name="restart_game">Restart Game</string>
     <string name="new_game">New Game</string>
     <string name="edit_games">Edit Games</string>
@@ -53,6 +53,7 @@
     <string name="content_description">Content Description</string>
 
     <string name="winning_bid_team_title">Winning Bid Team</string>
+    <string name="tutorial">Tutorial</string>
     <string name="manage_teams">Manage Teams</string>
     <string name="preferences">Preferences</string>
     <string name="non_bidding_points">Non Bidding Points</string>

@@ -1,7 +1,6 @@
 package com.zeroboss.scoring500.presentation.screens.home
 
 import android.annotation.SuppressLint
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -118,7 +117,6 @@ fun AppBar(
 }
 
 
-@OptIn(ExperimentalMaterialApi::class, ExperimentalAnimationApi::class)
 @Composable
 fun Body(
     navigator: DestinationsNavigator
@@ -138,7 +136,7 @@ fun Body(
     ) {
         if (state.matches.isNotEmpty()) {
             Text(
-                text = stringResource(R.string.match_items),
+                text = stringResource(R.string.match_history),
                 style = typography.h5,
                 modifier = Modifier
                     .padding(top = 10.dp)
