@@ -1,6 +1,5 @@
 package com.zeroboss.scoring500.presentation.screens.home
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -34,10 +33,10 @@ import com.zeroboss.scoring500.presentation.dialogs.DeleteMatchDialog
 import com.zeroboss.scoring500.presentation.screens.destinations.GameScreenDestination
 import com.zeroboss.scoring500.presentation.screens.destinations.NewHandDestination
 import com.zeroboss.scoring500.presentation.screens.destinations.NewMatchScreenDestination
+import com.zeroboss.scoring500.ui.theme.dialogTitle
 import com.zeroboss.scoring500.ui.theme.navigationTitle2
 import org.koin.androidx.compose.viewModel
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Destination
 @Composable
 fun HomeScreen(
@@ -48,8 +47,8 @@ fun HomeScreen(
     Scaffold(
         scaffoldState = scaffoldState,
         modifier = Modifier.fillMaxSize(),
-        topBar = { AppBar(navigator) },
-        content = { Body(navigator) },
+        topBar = { HomeAppBar(navigator) },
+        content = { HomeBody(navigator) },
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
@@ -67,7 +66,7 @@ fun HomeScreen(
 }
 
 @Composable
-fun AppBar(
+fun HomeAppBar(
     navigator: DestinationsNavigator
 ) {
     Row(
@@ -118,7 +117,7 @@ fun AppBar(
 
 
 @Composable
-fun Body(
+fun HomeBody(
     navigator: DestinationsNavigator
 ) {
     val homeViewModel by viewModel<HomeViewModel>()
@@ -137,7 +136,7 @@ fun Body(
         if (state.matches.isNotEmpty()) {
             Text(
                 text = stringResource(R.string.match_history),
-                style = typography.h5,
+                style = dialogTitle,
                 modifier = Modifier
                     .padding(top = 10.dp)
                     .fillMaxWidth(),
