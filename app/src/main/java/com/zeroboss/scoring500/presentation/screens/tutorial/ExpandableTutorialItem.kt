@@ -74,6 +74,8 @@ fun ExpandableTutorialItem(
                     MainMenuDetail()
                 } else if (item == TutorialItem.HomeScreen) {
                     HomeScreenDetail()
+                } else if (item == TutorialItem.NewMatchScreen) {
+
                 }
             }
         }
