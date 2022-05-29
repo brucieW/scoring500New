@@ -13,11 +13,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import com.zeroboss.scoring500.R
 import com.zeroboss.scoring500.data.common.EXPAND_ANIMATION_DURATION
 import com.zeroboss.scoring500.ui.theme.normalText
-import com.zeroboss.scoring500.ui.theme.typography
 
 @Composable
 fun ExpandableTutorialItem(
@@ -68,14 +66,20 @@ fun ExpandableTutorialItem(
             }
 
             if (expanded) {
-                if (item == TutorialItem.Introduction) {
-                    IntroductionDetail()
-                } else if (item == TutorialItem.MainMenu) {
-                    MainMenuDetail()
-                } else if (item == TutorialItem.HomeScreen) {
-                    HomeScreenDetail()
-                } else if (item == TutorialItem.NewMatchScreen) {
-
+                when (item) {
+                    TutorialItem.Introduction -> IntroductionDetail()
+                    TutorialItem.MainMenu -> MainMenuDetail()
+                    TutorialItem.HomeScreen -> HomeScreenDetail()
+                    TutorialItem.None -> {}
+                    TutorialItem.NewMatchScreen -> {}
+                    TutorialItem.NewHandScreen -> {}
+                    TutorialItem.GameScreen -> {}
+                    TutorialItem.ManageTeamsScreen -> {}
+                    TutorialItem.PreferencesDialog -> {}
+                    TutorialItem.StatisticsScreen -> {}
+                    TutorialItem.BackupDatabaseDialog -> {}
+                    TutorialItem.RestoreDatabaseDialog -> {}
+                    TutorialItem.ClearBackupsDialog -> {}
                 }
             }
         }
